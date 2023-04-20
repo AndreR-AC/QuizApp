@@ -1,17 +1,23 @@
-package com.training.quizapp
+import com.training.quizapp.Question
+import com.training.quizapp.R
 
 object Constants {
 
-    fun getQuestions(): ArrayList<Question>{
+    // TODO  Create a constant variables which we required in the result screen
+    const val USER_NAME: String = "user_name"
+    const val TOTAL_QUESTIONS: String = "total_questions"
+    const val CORRECT_ANSWERS: String = "correct_answers"
+    fun getQuestions(): ArrayList<Question> {
         val questionsList = ArrayList<Question>()
 
         // 1
         val que1 = Question(
             1, "What country does this flag belong to?",
             R.drawable.ic_flag_of_argentina,
-            "Argentina", "Australia","Armenia","Austria",
-            1
+            "Argentina", "Australia",
+            "Armenia", "Austria", 1
         )
+
         questionsList.add(que1)
 
         // 2
@@ -103,6 +109,7 @@ object Constants {
         )
 
         questionsList.add(que10)
+
         return questionsList
     }
 }
